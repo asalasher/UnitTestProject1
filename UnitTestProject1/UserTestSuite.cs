@@ -38,7 +38,18 @@ namespace UnitTestProject1
             //Assert
             Assert.False(result);
             Assert.Equal(0, User.Points);
+        }
 
+        [Fact]
+        public void AddPoints_InputNegative_ExceptionThrown()
+        {
+            //Arrange
+
+            //Act
+            var exception = Record.Exception(() => User.AddPoints(-1));
+
+            //Assert
+            Assert.Equal("points can not be negative", exception.Message);
         }
 
     }

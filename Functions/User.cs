@@ -17,7 +17,11 @@ namespace Functions
 
         public bool AddPoints(int points)
         {
-            if (points == 0) return false;
+            if (points == 0)
+                return false;
+
+            if (points < 0)
+                throw new ArgumentException("points can not be negative");
 
             Points += points;
             return true;
@@ -39,14 +43,13 @@ namespace Functions
             StreamReader reader = new StreamReader(".\\UsersRepository.txt");
             string document = reader.ReadToEnd();
             //document.Split(new char[] { '\r', ',' });
-
             Console.WriteLine(document);
             return true;
         }
 
         public override string ToString()
         {
-            return $"{Id},{Name},{Points}";
+            return $"Id:{Id}, Name:{Name}, Points:{Points}";
         }
 
     }

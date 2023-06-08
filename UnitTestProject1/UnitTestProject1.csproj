@@ -50,9 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Functions\Functions.csproj">
+    <ProjectReference Include="..\Functions\Domain.csproj">
       <Project>{cf2ad40c-09bd-4db7-898a-5849c1424bd7}</Project>
-      <Name>Functions</Name>
+      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
