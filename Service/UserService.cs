@@ -9,7 +9,7 @@ namespace Service
     {
         private readonly UsersRepo _userRepo;
 
-        public UserService(UsersRepo userRepo)
+        public UserService(IUsersRepo userRepo)
         {
             _userRepo = userRepo;
         }

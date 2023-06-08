@@ -6,7 +6,7 @@ using System.IO;
 
 namespace DataAccess
 {
-    public class UsersRepo
+    public class UsersRepo : IUsersRepo
     {
         private const string _fileName = "userRepo.txt";
         private readonly string _fullPath;
@@ -15,6 +15,11 @@ namespace DataAccess
         {
             _fullPath =
                 Path.Combine(Environment.CurrentDirectory, "LocalDataStorage", _fileName);
+        }
+
+        public User GetById(int id)
+        {
+            return new User(2, "Alberto");
         }
 
         public List<User> GetDataFromFile()
